@@ -2814,7 +2814,9 @@ in {
 
   dugong = callPackage ../development/python-modules/dugong { };
 
-  dulwich = callPackage ../development/python-modules/dulwich { };
+  dulwich = callPackage ../development/python-modules/dulwich {
+    inherit (pkgs) gnupg;
+  };
 
   dunamai = callPackage ../development/python-modules/dunamai { };
 
