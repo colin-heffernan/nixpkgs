@@ -3,6 +3,7 @@
 , fetchPypi
 , flit-core
 , pytestCheckHook
+, pytest-console-scripts
 , pythonOlder
 }:
 
@@ -24,7 +25,12 @@ buildPythonPackage rec {
 
   checkInputs = [
     pytestCheckHook
+    pytest-console-scripts
   ];
+
+  preCheck = ''
+    export PATH=$PATH:$out/bin
+  '';
 
   pythonImportsCheck = [
     "pep440"
