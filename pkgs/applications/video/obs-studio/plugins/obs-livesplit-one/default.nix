@@ -9,13 +9,13 @@
 }:
 rustPlatform.buildRustPackage rec {
   pname = "obs-livesplit-one";
-  version = "0.3.4";
+  version = "0.2.0";
 
   src = fetchFromGitHub {
     owner = "LiveSplit";
     repo = pname;
     rev = "v${version}";
-    sha256 = "sha256-3B3P1PlzIlpVqHJMKWpEnWXGgD/IaiWM1FVKn0BtRj0=";
+    sha256 = lib.fakeHash;
   };
 
   cargoHash = lib.fakeHash;
