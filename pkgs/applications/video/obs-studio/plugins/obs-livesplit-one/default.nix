@@ -9,17 +9,18 @@
 }:
 rustPlatform.buildRustPackage rec {
   pname = "obs-livesplit-one";
-  version = "0.2.0";
+  version = "0.3.4";
 
   src = fetchFromGitHub {
     owner = "LiveSplit";
     repo = pname;
     rev = "v${version}";
-    # sha256 = "sha256-3B3P1PlzIlpVqHJMKWpEnWXGgD/IaiWM1FVKn0BtRj0=";
-    sha256 = "sha256-C1u4z7iQUETM84kf6S6obw+C0ox8J9gMJoVP3/3ZoYw=";
+    sha256 = "sha256-3B3P1PlzIlpVqHJMKWpEnWXGgD/IaiWM1FVKn0BtRj0=";
+    # sha256 = "sha256-C1u4z7iQUETM84kf6S6obw+C0ox8J9gMJoVP3/3ZoYw=";
   };
 
   cargoHash = "sha256-mQ0TR4DL4bA5u4IL3RY9aLxU5G6qQ5W5xuNadiXGeB0=";
+  # cargoHash = "sha256-mQ0TR4DL4bA5u4IL3RY9aLxU5G6qQ5W5xuNadiXGeB0=";
 
   nativeBuildInputs = [cmake pkg-config];
   buildInputs = [fontconfig obs-studio];
