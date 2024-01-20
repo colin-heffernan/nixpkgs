@@ -9,22 +9,19 @@
 }:
 rustPlatform.buildRustPackage rec {
   pname = "obs-livesplit-one";
-  version = "0.3.4";
+  version = "git";
 
   src = fetchFromGitHub {
     owner = "LiveSplit";
     repo = pname;
-    rev = "v${version}";
-    sha256 = "sha256-3B3P1PlzIlpVqHJMKWpEnWXGgD/IaiWM1FVKn0BtRj0=";
+    rev = "b9c8489dd933c19c642375d73303436ba8d1a3cf";
+    sha256 = lib.fakeHash;
   };
 
   cargoLock = {
     lockFile = ./Cargo.lock;
     outputHashes = {
-      "livesplit-auto-splitting-0.1.0" = "sha256-/xQEVJH6m6nH5Z1kuOPEElOcOqJmiG9Q8cOx0e6p3Wc=";
-      # "livesplit-core" = lib.makeHash;
-      # "livesplit-hotkey" = lib.makeHash;
-      # "livesplit-title-abbreviations" = lib.makeHash;
+      "livesplit-auto-splitting-0.1.0" = lib.fakeHash;
     };
   };
 
