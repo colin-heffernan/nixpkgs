@@ -21,7 +21,7 @@ rustPlatform.buildRustPackage rec {
   cargoLock = {
     lockFile = ./Cargo.lock;
     outputHashes = {
-      "livesplit-auto-splitting-0.1.0" = lib.fakeHash;
+      "livesplit-auto-splitting-0.1.0" = "sha256-/xQEVJH6m6nH5Z1kuOPEElOcOqJmiG9Q8cOx0e6p3Wc=";
       # "livesplit-core" = lib.makeHash;
       # "livesplit-hotkey" = lib.makeHash;
       # "livesplit-title-abbreviations" = lib.makeHash;
