@@ -23,9 +23,9 @@ rustPlatform.buildRustPackage rec {
     kill
   '';
 
-  cargoLock = {
-    lockFile = ./Cargo.lock;
-  };
+  # cargoLock = {
+  #   lockFile = ./Cargo.lock;
+  # };
   # cargoHash = "sha256-mQ0TR4DL4bA5u4IL3RY9aLxU5G6qQ5W5xuNadiXGeB0=";
 
   nativeBuildInputs = [cmake pkg-config];
