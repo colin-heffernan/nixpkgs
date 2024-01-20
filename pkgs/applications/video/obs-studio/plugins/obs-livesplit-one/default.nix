@@ -19,7 +19,7 @@ rustPlatform.buildRustPackage rec {
     # sha256 = "sha256-C1u4z7iQUETM84kf6S6obw+C0ox8J9gMJoVP3/3ZoYw=";
   };
 
-  cargoHash = "sha256-mQ0TR4DL4bA5u4IL3RY9aLxU5G6qQ5W5xuNadiXGeB0=";
+  cargoSha256 = "d4d2a175a13f4078885d90ae073a015b82360cdd08935d3547d29c81e55fd72d";
   # cargoHash = "sha256-mQ0TR4DL4bA5u4IL3RY9aLxU5G6qQ5W5xuNadiXGeB0=";
 
   nativeBuildInputs = [cmake pkg-config];
