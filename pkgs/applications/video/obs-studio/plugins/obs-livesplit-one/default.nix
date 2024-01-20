@@ -18,10 +18,7 @@ rustPlatform.buildRustPackage rec {
     sha256 = "sha256-3B3P1PlzIlpVqHJMKWpEnWXGgD/IaiWM1FVKn0BtRj0=";
   };
 
-  # cargoSha256 = "6a67e8d3136aa2a886810522ba97cdb92a2a389470c47cb301b2497311b8e73a";
-  cargoDeps = rustPlatform.importCargoLock {
-    lockFile = ./Cargo.lock;
-  };
+  cargoHash = lib.fakeHash;
 
   nativeBuildInputs = [cmake pkg-config];
   buildInputs = [fontconfig obs-studio];
