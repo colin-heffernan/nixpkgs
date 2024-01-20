@@ -20,6 +20,12 @@ rustPlatform.buildRustPackage rec {
 
   cargoLock = {
     lockFile = ./Cargo.lock;
+    outputHashes = {
+      "livesplit-auto-splitting-0.1.0" = lib.fakeHash;
+      "livesplit-core" = lib.makeHash;
+      "livesplit-hotkey" = lib.makeHash;
+      "livesplit-title-abbreviations" = lib.makeHash;
+    };
   };
 
   nativeBuildInputs = [cmake pkg-config];
