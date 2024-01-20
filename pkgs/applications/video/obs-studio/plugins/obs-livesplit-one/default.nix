@@ -22,9 +22,9 @@ rustPlatform.buildRustPackage rec {
     lockFile = ./Cargo.lock;
     outputHashes = {
       "livesplit-auto-splitting-0.1.0" = lib.fakeHash;
-      "livesplit-core" = lib.makeHash;
-      "livesplit-hotkey" = lib.makeHash;
-      "livesplit-title-abbreviations" = lib.makeHash;
+      # "livesplit-core" = lib.makeHash;
+      # "livesplit-hotkey" = lib.makeHash;
+      # "livesplit-title-abbreviations" = lib.makeHash;
     };
   };
 
