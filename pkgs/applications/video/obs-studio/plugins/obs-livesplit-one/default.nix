@@ -15,7 +15,8 @@ rustPlatform.buildRustPackage rec {
     owner = "LiveSplit";
     repo = pname;
     rev = "v${version}";
-    sha256 = lib.fakeHash;
+    # sha256 = "sha256-3B3P1PlzIlpVqHJMKWpEnWXGgD/IaiWM1FVKn0BtRj0=";
+    sha256 = "sha256-C1u4z7iQUETM84kf6S6obw+C0ox8J9gMJoVP3/3ZoYw=";
   };
 
   cargoHash = lib.fakeHash;
