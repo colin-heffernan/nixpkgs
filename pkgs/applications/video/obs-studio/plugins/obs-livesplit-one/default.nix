@@ -19,6 +19,7 @@ rustPlatform.buildRustPackage rec {
   };
 
   postPatch = ''
+    ls -lah
     ln -s ${./Cargo.lock} Cargo.lock
   '';
 
